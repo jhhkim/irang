@@ -6,10 +6,11 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Scrapmap {
+    public static void scrap(){
     Document doc;
-        String URL = "https://www.mangoplate.com/search/%EA%B8%B0%EC%9E%A5%EA%B5%B0";
+    
     try {
-        doc = Jsoup.connect(URL).get();
+        doc = Jsoup.connect("https://www.mangoplate.com/search/%EA%B8%B0%EC%9E%A5%EA%B5%B0").get();
         Elements store = doc.select("div>a>h2.title");
         Elements category = doc.select("div>p.etc>span");
         Elements addr = doc.getElementsByTag("alt");
@@ -20,4 +21,5 @@ public class Scrapmap {
     } catch (Exception e) {
         e.printStackTrace();
     }
+}
 }
