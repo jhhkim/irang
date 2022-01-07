@@ -1,10 +1,10 @@
 package com.kids.irang.dto;
 
 import com.kids.irang.domain.Kidsmap;
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 
 
 @Getter
@@ -15,17 +15,19 @@ public class KidsmapDto {
     private String category;
 
     @Builder
-    public KidsmapDto(String store, String addr, String category){
+    public KidsmapDto(String store, String addr, String category) {
         this.store = store;
         this.addr = addr;
         this.category = category;
+
     }
 
-    public Kidsmap toEntity(){
+    public Kidsmap toEntity() {
         return Kidsmap.builder()
-        .store(store)
-        .addr(addr)
-        .category(category)
-        .build();
+                .store(store)
+                .addr(addr)
+                .category(category)
+                .build();
     }
+
 }
