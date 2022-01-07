@@ -1,5 +1,30 @@
 {{>layout/header}}
-
-    mainpage
-
+<!--value에 해당되는 데이터를 불러올거임!-->
+<form>
+	<select name="sido">
+        <option>시/도를 선택해주세요</option>
+        <option value="1">서울시</option>
+        <option value="2">부산시</option>
+    </select>
+    <select name="gugun"><!--위에서 선택한 시/도에 따라 나오는 내용이 달라져야함!-->
+        <option>구/군을 선택해주세요</option>
+        <option value="2.1">중구</option>
+        <option value="2.2">서구</option>
+        <option value="2.3">동구</option>
+        <option value="2.4">영도구</option>
+        <option value="2.5">부산진구</option>
+        <option value="2.6">동래구</option>
+        <option value="2.7">남구</option>
+        <option value="2.8">북구</option>
+        <option value="2.9">해운대구</option>
+        <option value="2.10">사하구</option>
+        <option value="2.11">금정구</option>
+        <option value="2.12">강서구</option>
+        <option value="2.13">연제구</option>
+        <option value="2.14">수영구</option>
+        <option value="2.15">사상구</option>
+        <option value="2.16">기장군</option>
+    </select>
+	<button type="submit">확인</button>  
+</form>
 {{>layout/footer}}
