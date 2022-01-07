@@ -4,11 +4,11 @@ import com.kids.irang.domain.Kidsmap;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 
 @Getter
-@Setter
+@NoArgsConstructor
 public class KidsmapDto {
     private String store;
     private String addr;

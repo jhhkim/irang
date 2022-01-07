@@ -2,20 +2,22 @@ package com.kids.irang.service;
 
 import com.kids.irang.domain.KidsmapRepository;
 import com.kids.irang.dto.KidsmapDto;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
+import com.kids.irang.utils.ScrapMap;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
 public class KidsmapService {
-    private final KidsmapRepository kidsmapRepository;
+    final KidsmapRepository kidsmapRepository;
 
-    //insert data
-    @Transactional
-    public Long save(KidsmapDto requestDto){
-        return kidsmapRepository.save(requestDto.toEntity()).getId();
+    public void save(KidsmapDto dto) {
+        kidsmapRepository.save(dto.toEntity());
+    }
+
+    public List<KidsmapDto> findList(String search) {
+        return ScrapMap.scrap(search);
     }
 }
