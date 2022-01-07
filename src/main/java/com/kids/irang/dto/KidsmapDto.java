@@ -4,7 +4,6 @@ import com.kids.irang.domain.Kidsmap;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 
 
@@ -30,5 +29,5 @@ public class KidsmapDto {
                 .category(category)
                 .build();
     }
-   
+
 }

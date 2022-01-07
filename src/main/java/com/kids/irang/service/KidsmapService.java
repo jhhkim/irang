@@ -20,4 +20,5 @@ public class KidsmapService {
     public List<KidsmapDto> findList(String search) {
         return ScrapMap.scrap(search);
     }
+
 }
